@@ -9,16 +9,51 @@
     </style>
   </head>
   <body>
-
-    <canvas id='canvas'></canvas>
+    <canvas id='canvas1'></canvas>
+    <canvas id='canvas2'></canvas>
+    <canvas id='canvas3'></canvas>
     <script>
 
-      var iceland = canvas.getContext('2d')
+      var iceland = canvas1.getContext('2d')
+      //x, y, width, height
       iceland.fillStyle = "#000084"
       iceland.fillRect(0,0,60,60)
       iceland.fillRect(0,90, 60, 60)
       iceland.fillRect(90,0, 240, 60)
       iceland.fillRect(90,90, 240, 60)
+
+      var franceblue = canvas2.getContext("2d")
+      franceblue.fillStyle = "#00209F"
+      franceblue.fillRect(0,0,100,150)
+      var francered = canvas2.getContext("2d")
+      francered.fillStyle = "#F42A41"
+      francered.fillRect(200,0, 100, 150)
+
+
+      var weird = canvas3.getContext("2d")
+      weird.fillStyle = "blue"
+      weird.beginPath()
+      weird.moveTo(50,50)
+      weird.lineTo(50,100)
+      weird.lineTo(100,100)
+      weird.closePath()
+      weird.fill()
+
+      weird.moveTo(100,20)
+      weird.arc(90,20,10,0, Math.PI*2)
+      weird.closePath()
+      weird.stroke()
+
+      weird.moveTo(150, 20)
+      weird.arc(140,20,10,0, Math.PI*2)
+      weird.closePath()
+      weird.stroke()
+
+      weird.moveTo(145, 60)
+      weird.arc(115,60,30,0, Math.PI*1)
+      weird.stroke()
+
+
 
     </script>
   </body>
